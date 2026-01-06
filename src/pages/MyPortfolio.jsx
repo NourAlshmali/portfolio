@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import p1 from "/public/assets/img/1.png";
+import p1 from "/public/assets/theraQ.png";
 import p2 from "/public/assets/img/2.png";
 import p3 from "/public/assets/img/3.jpeg";
 import {
@@ -11,6 +11,7 @@ import {
   FaNodeJs,
   FaGitAlt,
 } from "react-icons/fa";
+import { LuFileJson } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 
@@ -21,14 +22,17 @@ const MyPortfolio = () => {
     {
       id: 1,
       image: p1,
-      projectName: "Project One",
-      description: "Description of Project One",
+      projectName: "THERAQ---Appointment",
+      description:
+        "THERAQ is a platform for easily booking medical appointments, allowing users to find doctors, view their availability, and schedule visits quickly and conveniently",
       skills: [
-        { icon: <FaHtml5 />, name: "HTML5" },
-        { icon: <FaCss3Alt />, name: "CSS" },
-        { icon: <FaJs />, name: "JavaScript" },
         { icon: <FaReact />, name: "React" },
+        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+        { icon: <FaJs />, name: "JavaScript" },
+        { icon: <LuFileJson />, name: "JSON" },
       ],
+      demoLink:
+        "https://theraq-appointment-scheduling-platform-874vxksat.vercel.app/",
     },
     {
       id: 2,
@@ -40,6 +44,7 @@ const MyPortfolio = () => {
         { icon: <SiExpress />, name: "Express.js" },
         { icon: <SiMongodb />, name: "MongoDB" },
       ],
+      demoLink: "#", // ضع رابط المشروع الثاني هنا إذا موجود
     },
     {
       id: 3,
@@ -50,6 +55,7 @@ const MyPortfolio = () => {
         { icon: <FaGitAlt />, name: "JavaScript" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
       ],
+      demoLink: "#", // ضع رابط المشروع الثالث هنا إذا موجود
     },
   ];
 
@@ -75,9 +81,15 @@ const MyPortfolio = () => {
             </h3>
 
             <div className="flex justify-center space-x-4">
-              <button className="bg-[#c77dffff] font-JetBrains flex items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition">
+              {/* Demo Link */}
+              <a
+                href={tab.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#c77dffff] font-JetBrains flex items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
+              >
                 <FaGlobe className="text-2xl" /> Demo
-              </button>
+              </a>
 
               <button
                 onClick={() => setSelectedProject(tab)}
@@ -129,9 +141,14 @@ const MyPortfolio = () => {
               ))}
             </div>
 
-            <button className="bg-[#c77dffff] font-JetBrains justify-center flex items-center gap-3 mt-[25px] text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition">
+            <a
+              href={selectedProject.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#c77dffff] font-JetBrains justify-center flex items-center gap-3 mt-[25px] text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 hover:text-[#c77dffff] transition"
+            >
               <FaGlobe className="text-2xl" /> Demo
-            </button>
+            </a>
           </div>
         </div>
       )}
