@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import bgImage from "../assets/img/BG-hero.png";
 
 const Hero = () => {
   const messages = ["Web Designer", "Web Developer"];
@@ -29,14 +30,15 @@ const Hero = () => {
   }, [displayText, isDeleting, index, messages]);
 
   return (
-    <div className="w-full h-screen bg-[url('/assets/img/BG-hero.png')] bg-cover bg-center flex">
+   <div
+  className="w-full h-screen flex"
+  style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
+>
       <div className="flex flex-col justify-center items-center w-full h-full space-y-13 px-4 sm:px-8 lg:px-16">
-        {/* Hi, I am Nour */}
         <h1 className="text-white font-JetBrains font-bold tracking-[5px] text-4xl sm:text-5xl md:text-6xl text-center">
           Hi, I am Nour
         </h1>
 
-        {/* Animated Text */}
         <h1 className="flex items-center text-5xl sm:text-6xl md:text-7xl text-center">
           <span className="bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent font-JetBrains tracking-[3px]">
             {displayText}
@@ -44,7 +46,6 @@ const Hero = () => {
           <span className="text-white font-JetBrains blinking ml-2">|</span>
         </h1>
 
-        {/* Building your dream */}
         <h1 className="text-white font-JetBrains font-bold tracking-[5px] text-3xl sm:text-4xl md:text-6xl text-center">
           Building your dream
         </h1>

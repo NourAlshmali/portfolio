@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import p1 from "/public/assets/img/theraQ.png";
-import p2 from "/public/assets/img/Harmoni.png";
+import p1 from "../assets/img/theraQ.png";
+import p2 from "../assets/img/Harmoni.png";
 
 import {
   FaGlobe,
