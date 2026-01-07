@@ -1,10 +1,57 @@
-// ToolsAndSkills.jsx
+
 import React from "react";
 import { VscCode } from "react-icons/vsc";
 import { FaGithub, FaGitAlt } from "react-icons/fa";
 import { SiFigma, SiPostman } from "react-icons/si";
 import { TbBrandMongodb } from "react-icons/tb";
 import Skills from "../componants/Skills";
+
+const shapes = [
+  { size: 40, color: "bg-purple-500/30" },
+  { size: 30, color: "bg-pink-400/30" },
+  { size: 50, color: "bg-blue-400/20" },
+];
+
+const BackgroundShapes = () => {
+  return (
+    <>
+      {shapes.map((shape, i) =>
+        [...Array(10)].map((_, j) => {
+          const left = Math.random() * 100;
+          const top = Math.random() * 100;
+          const duration = 15 + Math.random() * 10;
+          const xMove = 20 + Math.random() * 30;
+          const yMove = 10 + Math.random() * 30;
+
+          return (
+            <motion.div
+              key={`${i}-${j}`}
+              className={`absolute ${shape.color} rounded-full`}
+              style={{
+                width: shape.size,
+                height: shape.size,
+                left: `${left}%`,
+                top: `${top}%`,
+              }}
+              animate={{
+                x: [0, xMove, 0],
+                y: [0, yMove, 0],
+                rotate: [0, 360],
+              }}
+              transition={{
+                duration: duration,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear",
+                delay: Math.random() * 5,
+              }}
+            />
+          );
+        })
+      )}
+    </>
+  );
+};
 
 const ToolsAndSkills = () => {
   const Tools = [
@@ -18,10 +65,8 @@ const ToolsAndSkills = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-b from-[#0c011e] via-[#05000d] to-black overflow-hidden">
-    
       <div className="relative z-10 flex flex-col items-center pt-10">
-       
-        <h1 className="text-5xl text-white font-bold mb-16 flex space-x-4">
+        <h1 className="text-5xl text-white font-bold mb-16 flex space-x-4 text-center">
           <span className="bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent">
             Tools
           </span>
@@ -31,7 +76,6 @@ const ToolsAndSkills = () => {
           </span>
         </h1>
 
-      
         <h2 className="text-4xl text-purple-400 mb-8">Tools</h2>
         <div className="grid md:grid-cols-3 gap-10 px-10 w-full max-w-4xl">
           {Tools.map((tool) => (
@@ -48,7 +92,6 @@ const ToolsAndSkills = () => {
             </div>
           ))}
         </div>
-
 
         <h2 className="text-4xl text-purple-400 mt-20 mb-8">Skills</h2>
         <Skills />

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import image from "/public/assets/img/image.png";
+import image from "/public/assets/img/Contact.png";
 import {
   FaInstagram,
   FaFacebookF,

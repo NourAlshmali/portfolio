@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import p1 from "/public/assets/theraQ.png";
-import p2 from "/public/assets/img/2.png";
-import p3 from "/public/assets/img/3.jpeg";
+import p1 from "/public/assets/img/theraQ.png";
+import p2 from "/public/assets/img/Harmoni.png";
+
 import {
   FaGlobe,
   FaHtml5,
@@ -22,7 +22,7 @@ const MyPortfolio = () => {
     {
       id: 1,
       image: p1,
-      projectName: "THERAQ---Appointment",
+      projectName: "THERAQ Appointment",
       description:
         "THERAQ is a platform for easily booking medical appointments, allowing users to find doctors, view their availability, and schedule visits quickly and conveniently",
       skills: [
@@ -37,25 +37,16 @@ const MyPortfolio = () => {
     {
       id: 2,
       image: p2,
-      projectName: "Project Two",
-      description: "Description of Project Two",
+      projectName: "Harmoni-Spotify-Clone",
+      description:
+        "Harmoni-Spotify-Clone is a sleek, music-focused web app inspired by Spotify that lets users explore and enjoy music with a clean and engaging interface.",
       skills: [
-        { icon: <FaNodeJs />, name: "Node.js" },
-        { icon: <SiExpress />, name: "Express.js" },
-        { icon: <SiMongodb />, name: "MongoDB" },
-      ],
-      demoLink: "#", // ضع رابط المشروع الثاني هنا إذا موجود
-    },
-    {
-      id: 3,
-      image: p3,
-      projectName: "Project Three",
-      description: "Description of Project Three",
-      skills: [
-        { icon: <FaGitAlt />, name: "JavaScript" },
+        { icon: <FaReact />, name: "React" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+        { icon: <FaJs />, name: "JavaScript" },
+        { icon: <LuFileJson />, name: "JSON" },
       ],
-      demoLink: "#", // ضع رابط المشروع الثالث هنا إذا موجود
+      demoLink: "https://harmoni-spotify-clone.vercel.app/",
     },
   ];
 
@@ -80,20 +71,19 @@ const MyPortfolio = () => {
               {tab.projectName}
             </h3>
 
-            <div className="flex justify-center space-x-4">
-              {/* Demo Link */}
+            <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-4 sm:space-y-0">
               <a
                 href={tab.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#c77dffff] font-JetBrains flex items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
+                className="w-full sm:w-auto bg-[#c77dffff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
               >
-                <FaGlobe className="text-2xl" /> Demo
+                <FaGlobe className="text-2xl" /> Live Site
               </a>
 
               <button
                 onClick={() => setSelectedProject(tab)}
-                className="bg-[#c77dffff] font-JetBrains flex items-center gap-3 text-white px-6 py-3 cursor-pointer rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
+                className="w-full sm:w-auto bg-[#c77dffff] font-JetBrains flex justify-center items-center gap-3 text-white px-6 py-3 cursor-pointer rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
               >
                 <FiEye className="text-2xl" /> View More
               </button>
@@ -102,7 +92,6 @@ const MyPortfolio = () => {
         ))}
       </ul>
 
-      {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
           <div className="bg-white rounded-xl p-10 max-w-2xl w-full relative">
@@ -127,7 +116,6 @@ const MyPortfolio = () => {
               {selectedProject.description}
             </p>
 
-            {/* Skills List */}
             <h3 className="text-2xl font-semibold mb-4">Skills Used:</h3>
             <div className="flex flex-wrap gap-4 mb-6">
               {selectedProject.skills.map((skill, index) => (
@@ -147,7 +135,7 @@ const MyPortfolio = () => {
               rel="noopener noreferrer"
               className="bg-[#c77dffff] font-JetBrains justify-center flex items-center gap-3 mt-[25px] text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 hover:text-[#c77dffff] transition"
             >
-              <FaGlobe className="text-2xl" /> Demo
+              <FaGlobe className="text-2xl" /> Live Site
             </a>
           </div>
         </div>

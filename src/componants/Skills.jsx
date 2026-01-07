@@ -7,6 +7,7 @@ import {
   FaNodeJs,
   FaGitAlt,
 } from "react-icons/fa";
+import { LuFileJson } from "react-icons/lu";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 
 const Skills = () => {
@@ -22,9 +23,10 @@ const Skills = () => {
       { icon: <SiMongodb />, name: "MongoDB", level: 70 },
       { icon: <FaHtml5 />, name: "HTML5", level: 95 },
       { icon: <FaCss3Alt />, name: "CSS", level: 95 },
-      { icon: <FaJs />, name: "Javascript", level: 85 },
+      { icon: <FaJs />, name: "Javascript", level: 80 },
       { icon: <FaReact />, name: "React", level: 90 },
-      { icon: <SiTailwindcss />, name: "Tailwind CSS", level: 80 },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS", level: 90 },
+      { icon: <LuFileJson />, name: "Json", level: 80 },
     ],
     "Front-end": [
       { icon: <FaHtml5 />, name: "HTML5", level: 95 },
@@ -42,7 +44,7 @@ const Skills = () => {
 
   const onTabClick = (tab) => {
     setSelectedTab(tab);
-    
+
     setRenderKey((k) => k + 1);
   };
 
