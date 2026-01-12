@@ -56,7 +56,7 @@ const Skills = () => {
         {Tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 text-[18px] cursor-pointer rounded-full w-[160px] font-semibold transform transition-all duration-300 ${
+            className={`px-4 py-2 text-[18px] cursor-pointer rounded-full w-[160px] sm:w-[120px] font-semibold transform transition-all duration-300 ${
               selectedTab === tab
                 ? "scale-115 bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 shadow-[0_0_10px_rgba(255,255,255,0.5),0_0_20px_rgba(255,255,255,0.4),0_0_30px_rgba(245,245,245,0.3)] text-white"
                 : "scale-100 bg-black/30 shadow-[0_0_10px_rgba(155,0,255,0.5),0_0_20px_rgba(155,0,255,0.4),0_0_30px_rgba(155,0,255,0.3)] bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent"

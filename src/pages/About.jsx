@@ -9,7 +9,7 @@ const About = () => {
       bg-gradient-to-b from-black via-[#05000d] to-[#0c011e] px-4 sm:px-8 lg:px-10"
     >
       {/* Title */}
-      <h1 className="text-white text-3xl sm:text-4xl md:text-5xl tracking-[3px] text-center font-JetBrains mt-16">
+      <h1 className="text-white text-3xl sm:text-4xl md:text-5xl tracking-[3px] text-center font-JetBrains mt-16 ">
         Why hire me for your
         <span className="bg-gradient-to-r pl-2 sm:pl-4 font-JetBrains tracking-[3px] from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent">
           next project?
