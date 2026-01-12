@@ -43,9 +43,10 @@ const cardData = [
     color: "#060010",
     title: "",
     description: (
-      <a href="public\NourAlshamaliCV.pdf" download className="text-bold hover:text-purple-400">
-        Download
-      </a>
+<a href="/NourAlshamaliCV.pdf" download className="font-bold hover:text-purple-400">
+  Download
+</a>
+
     ),
     label: "Grab my CV & explore my projects",
   },
