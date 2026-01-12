@@ -36,7 +36,7 @@ const cardData = [
   {
     color: "#060010",
     title: "",
-    description: "1 Year of Experience\n+5 Projects on GitHub ",
+    description: "1 Year Experience\n+5 Projects on GitHub ",
     label: "Technical Expertise",
   },
   {
