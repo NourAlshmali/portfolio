@@ -17,10 +17,10 @@ const About = () => {
       </h1>
 
       {/* Main Content */}
-      <div className="relative flex flex-col pl-20 lg:flex-row justify-center items-center mt-10 w-full h-[80vh]">
+      <div className="relative flex flex-col pl-20 lg:flex-row justify-center items-center gap-10 mt-10 w-full h-[80vh]">
         {/* Image */}
         <div className="w-full lg:w-1/3 flex justify-center">
-          <div className="border-2 border-purple-400 rounded-3xl p-1 w-[90%] sm:w-[350px] md:w-[380px] lg:w-[480px] h-[450px] sm:h-[480px] lg:h-[600px] flex items-center justify-center">
+          <div className="border-2 border-purple-400 rounded-3xl p-1 w-[90%] sm:w-[350px] md:w-[380px] lg:w-[480px] h-[450px] sm:h-[480px] lg:h-[500px] flex items-center justify-center">
             <img
               src={me}
               alt="Profile"
