@@ -11,7 +11,7 @@ const cardData = [
     color: "#060010",
     title: "Frontend Developer & UI/UX Designer",
     description:
-      "Crafting intuitive interfaces where aesthetics meet usability. I focus on user psychology, clean layouts, and seamless transitions from Figma to pixel-perfect code.",
+      "Crafting intuitive interfaces where aesthetics meet usability. I focus on user psychology, clean layouts, and seamless transitions from Figma to perfect code.",
     label: "I am Nour Al-Shamali",
   },
   {
@@ -43,10 +43,9 @@ const cardData = [
     color: "#060010",
     title: "",
     description: (
-<a href="/NourAlshamaliCV.pdf" download className="font-bold hover:text-purple-400">
-  Download
-</a>
-
+      <a href="/NourAlshamaliCV.pdf" download className="font-bold hover:text-purple-400">
+        Download
+      </a>
     ),
     label: "Grab my CV & explore my projects",
   },
@@ -366,10 +365,9 @@ const MagicBento = ({
 
           @media (min-width: 1024px) { 
             .card-responsive { grid-template-columns: repeat(4, 1fr); }
-            /* التوزيع التبادلي المطلوب */
+        
              .card-responsive .card:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-            .card-responsive .card:nth-child(4) { grid-column: span 2; grid-row: span 2; } /* كبير يمين */
-            /* كبير يسار */
+            .card-responsive .card:nth-child(4) { grid-column: span 2; grid-row: span 2; } 
           }
 
           .card--border-glow::after {
@@ -408,19 +406,20 @@ const MagicBento = ({
 
             const Content = (
               <>
-                <div className="card__header mb-1 opacity-90 text-[15px] uppercase tracking-widest font-extrabold">
+                {/* تم تعديل الخطوط لتكون متجاوبة (Responsive Font Sizes) */}
+                <div className="card__header mb-1 opacity-90 text-[12px] sm:text-[15px] uppercase tracking-widest font-extrabold">
                   {card.label}
                 </div>
                 <div className="card__content flex flex-col gap-1">
                   <h3
-                    className={`card__title text-[20px]  font-semibold m-0 leading-tight ${
+                    className={`card__title text-[16px] sm:text-[20px] font-semibold m-0 leading-tight ${
                       textAutoHide ? "" : ""
                     }`}
                   >
                     {card.title}
                   </h3>
                   <p
-                    className={`card__description whitespace-pre-line text-[18px] opacity-70 m-0 pt-3 leading-8 ${
+                    className={`card__description whitespace-pre-line text-[14px] sm:text-[18px] opacity-70 m-0 pt-2 sm:pt-3 leading-6 sm:leading-8 ${
                       textAutoHide ? "" : ""
                     }`}
                   >

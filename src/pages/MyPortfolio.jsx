@@ -49,11 +49,12 @@ const MyPortfolio = () => {
       ],
       demoLink: "https://harmoni-spotify-clone.vercel.app/",
     },
-     {
+    {
       id: 3,
       image: p3,
       projectName: "exlusive-e-commerce",
-      description:"A modern, high-performance e-commerce platform for a seamless and responsive shopping experience",
+      description:
+        "A modern, high-performance e-commerce platform for a seamless and responsive shopping experience",
       skills: [
         { icon: <FaReact />, name: "React" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
@@ -68,7 +69,7 @@ const MyPortfolio = () => {
       <h1 className="text-center text-5xl mb-[70px] tracking-[2px] font-JetBrains bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent mb-10">
         My Projects
       </h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-10">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         {projects.map((tab) => (
           <li
             key={tab.id}

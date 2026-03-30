@@ -127,18 +127,18 @@ const Contact = () => {
                 className="flex items-center gap-4 text-purple-300 hover:text-purple-500 transition"
               >
                 <FaWhatsapp className="text-3xl" />
-                <span>+963 983 754 281</span>
+                <span>Message Me</span>
               </a>
             </div>
           </div>
         </div>
 
         <div className="flex justify-center md:justify-end pr-5">
-          <img
-            src={image}
-            alt="Contact"
-            className="w-[300px] md:w-[250px] lg:w-[350px] rounded-xl pt-[50px]"
-          />
+         <img
+  src={image}
+  alt="Contact"
+  className="hidden md:block w-[300px] md:w-[250px] lg:w-[350px] rounded-xl pt-[50px]"
+/>
         </div>
       </div>
     </div>
