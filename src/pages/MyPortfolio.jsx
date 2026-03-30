@@ -106,39 +106,40 @@ const MyPortfolio = () => {
 
       {selectedProject && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
-          <div className="bg-[#0f051d] border border-[#c77dff]/50 rounded-2xl p-8 max-w-2xl w-full relative shadow-[0_0_40px_rgba(199,125,255,0.2)]">
+          <div className="bg-[#0f051d] border border-[#c77dff]/50 rounded-2xl p-5 md:p-8 max-w-[95%] sm:max-w-md md:max-w-2xl w-full relative shadow-[0_0_40px_rgba(199,125,255,0.2)] max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-2 right-3 text-[#c77dff] hover:text-white bg-[#c77dff]/10 hover:bg-[#c77dff] p-2 rounded-full transition duration-300 cursor-pointer"
+              className="absolute top-3 right-3 text-[#c77dff] hover:text-white bg-[#c77dff]/10 hover:bg-[#c77dff] p-1.5 md:p-2 rounded-full transition duration-300 cursor-pointer z-10"
             >
-              <IoClose size={20} />
+              <IoClose size={18} className="md:w-6 md:h-6" />
             </button>
 
-            <h2 className="text-3xl font-bold mb-6 text-white text-center font-JetBrains tracking-wide">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-6 text-white text-center font-JetBrains tracking-wide px-6">
               {selectedProject.projectName}
             </h2>
 
             <img
               src={selectedProject.image}
               alt={selectedProject.projectName}
-              className="w-full h-72 object-cover rounded-xl mb-6 border border-white/10"
+              className="w-full h-40 md:h-72 object-cover rounded-xl mb-4 md:mb-6 border border-white/10"
             />
 
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-300 mb-4 md:mb-6 leading-relaxed">
               {selectedProject.description}
             </p>
 
-            <h3 className="text-xl font-semibold mb-4 text-[#c77dff]">
+            <h3 className="text-md md:text-xl font-semibold mb-3 text-[#c77dff]">
               Skills Used:
             </h3>
-            <div className="flex flex-wrap gap-3 mb-8">
+            
+            <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
               {selectedProject.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 bg-white/5 border border-white/10 text-gray-200 px-4 py-2 rounded-lg hover:border-[#c77dff]/50 transition"
+                  className="flex items-center gap-1.5 md:gap-2 bg-white/5 border border-white/10 text-gray-200 px-3 py-1.5 md:px-4 md:py-2 rounded-lg"
                 >
-                  <span className="text-[#c77dff]">{skill.icon}</span>
-                  <span className="text-sm font-medium">{skill.name}</span>
+                  <span className="text-[#c77dff] text-sm md:text-base">{skill.icon}</span>
+                  <span className="text-[10px] md:text-sm font-medium">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -147,9 +148,9 @@ const MyPortfolio = () => {
               href={selectedProject.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-[#c77dff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-4 rounded-xl hover:bg-transparent border border-[#c77dff] hover:text-[#c77dff] transition duration-300 shadow-[0_4px_15px_rgba(199,125,255,0.3)]"
+              className="w-full bg-[#c77dff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-3 md:py-4 rounded-xl hover:bg-transparent border border-[#c77dff] hover:text-[#c77dff] transition duration-300 shadow-[0_4px_15px_rgba(199,125,255,0.3)] text-sm md:text-base"
             >
-              <FaGlobe className="text-xl" /> Visit Live Project
+              <FaGlobe className="text-lg md:text-xl" /> Visit Live Project
             </a>
           </div>
         </div>
