@@ -53,8 +53,7 @@ const MyPortfolio = () => {
       id: 3,
       image: p3,
       projectName: "exlusive-e-commerce",
-      description:
-        "Harmoni-Spotify-Clone is a sleek, music-focused web app inspired by Spotify that lets users explore and enjoy music with a clean and engaging interface.",
+      description:"A modern, high-performance e-commerce platform for a seamless and responsive shopping experience",
       skills: [
         { icon: <FaReact />, name: "React" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
