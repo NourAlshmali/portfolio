@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import p1 from "../assets/img/theraQ.png";
 import p2 from "../assets/img/Harmoni.png";
 import p3 from "../assets/img/e-commerce.png";
-
 import {
   FaGlobe,
   FaHtml5,
@@ -14,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 const MyPortfolio = () => {
@@ -66,40 +66,38 @@ const MyPortfolio = () => {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-black via-[#05000d] to-[#0c011e] py-20">
-      <h1 className="text-center text-5xl mb-[70px] tracking-[2px] font-JetBrains bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent mb-10">
+      <h1 className="text-center text-5xl mb-[70px] tracking-[2px] font-JetBrains bg-gradient-to-r from-[#c084fc] via-[#9333ea] to-[#6b21a8] bg-clip-text text-transparent">
         My Projects
       </h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
+
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         {projects.map((tab) => (
           <li
             key={tab.id}
-            className="bg-white/10 backdrop-blur-xl border border-[#c77dffff] rounded-xl p-5 shadow-lg hover:scale-[1.02] transition duration-300"
+            className="bg-white/5 backdrop-blur-xl border border-[#c77dff]/30 rounded-xl p-5 shadow-lg hover:scale-[1.02] transition duration-300"
           >
             <img
               src={tab.image}
               alt={tab.projectName}
               className="w-full h-60 object-cover rounded-lg mb-4"
             />
-
-            <h3 className="text-white text-[30px] p-[10px] font-semibold text-center mb-4">
+            <h3 className="text-white text-[26px] p-[10px] font-semibold text-center mb-4">
               {tab.projectName}
             </h3>
-
             <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-4 sm:space-y-0">
               <a
                 href={tab.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-[#c77dffff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
+                className="w-full sm:w-auto bg-[#c77dff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dff] hover:bg-transparent hover:text-[#c77dff] transition duration-300"
               >
-                <FaGlobe className="text-2xl" /> Live Site
+                <FaGlobe className="text-xl" /> Live Site
               </a>
-
               <button
                 onClick={() => setSelectedProject(tab)}
-                className="w-full sm:w-auto bg-[#c77dffff] font-JetBrains flex justify-center items-center gap-3 text-white px-6 py-3 cursor-pointer rounded-xl border border-[#c77dffff] hover:bg-white/40 transition"
+                className="w-full sm:w-auto bg-transparent font-JetBrains flex justify-center items-center gap-3 text-[#c77dff] px-6 py-3 cursor-pointer rounded-xl border border-[#c77dff] hover:bg-[#c77dff] hover:text-white transition duration-300"
               >
-                <FiEye className="text-2xl" /> View More
+                <FiEye className="text-xl" /> View More
               </button>
             </div>
           </li>
@@ -107,38 +105,40 @@ const MyPortfolio = () => {
       </ul>
 
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
-          <div className="bg-white rounded-xl p-10 max-w-2xl w-full relative">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
+          <div className="bg-[#0f051d] border border-[#c77dff]/50 rounded-2xl p-8 max-w-2xl w-full relative shadow-[0_0_40px_rgba(199,125,255,0.2)]">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-3 right-3 text-2xl font-bold"
+              className="absolute top-2 right-3 text-[#c77dff] hover:text-white bg-[#c77dff]/10 hover:bg-[#c77dff] p-2 rounded-full transition duration-300 cursor-pointer"
             >
-              &times;
+              <IoClose size={20} />
             </button>
 
-            <h2 className="text-4xl font-bold mb-6 text-center">
+            <h2 className="text-3xl font-bold mb-6 text-white text-center font-JetBrains tracking-wide">
               {selectedProject.projectName}
             </h2>
 
             <img
               src={selectedProject.image}
               alt={selectedProject.projectName}
-              className="w-full h-80 object-cover rounded-lg mb-6"
+              className="w-full h-72 object-cover rounded-xl mb-6 border border-white/10"
             />
 
-            <p className="text-xl text-gray-700 mb-6">
+            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               {selectedProject.description}
             </p>
 
-            <h3 className="text-2xl font-semibold mb-4">Skills Used:</h3>
-            <div className="flex flex-wrap gap-4 mb-6">
+            <h3 className="text-xl font-semibold mb-4 text-[#c77dff]">
+              Skills Used:
+            </h3>
+            <div className="flex flex-wrap gap-3 mb-8">
               {selectedProject.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 bg-gray-700 text-white px-3 py-1 rounded-lg"
+                  className="flex items-center gap-2 bg-white/5 border border-white/10 text-gray-200 px-4 py-2 rounded-lg hover:border-[#c77dff]/50 transition"
                 >
-                  {skill.icon}
-                  <span>{skill.name}</span>
+                  <span className="text-[#c77dff]">{skill.icon}</span>
+                  <span className="text-sm font-medium">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -147,9 +147,9 @@ const MyPortfolio = () => {
               href={selectedProject.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#c77dffff] font-JetBrains justify-center flex items-center gap-3 mt-[25px] text-white cursor-pointer px-6 py-3 rounded-xl border border-[#c77dffff] hover:bg-white/40 hover:text-[#c77dffff] transition"
+              className="w-full bg-[#c77dff] font-JetBrains flex justify-center items-center gap-3 text-white cursor-pointer px-6 py-4 rounded-xl hover:bg-transparent border border-[#c77dff] hover:text-[#c77dff] transition duration-300 shadow-[0_4px_15px_rgba(199,125,255,0.3)]"
             >
-              <FaGlobe className="text-2xl" /> Live Site
+              <FaGlobe className="text-xl" /> Visit Live Project
             </a>
           </div>
         </div>
