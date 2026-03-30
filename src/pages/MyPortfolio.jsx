@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import p1 from "../assets/img/theraQ.png";
 import p2 from "../assets/img/Harmoni.png";
+import p3 from "../assets/img/e-commerce.png";
 
 import {
   FaGlobe,
@@ -39,7 +40,7 @@ const MyPortfolio = () => {
       image: p2,
       projectName: "Harmoni-Spotify-Clone",
       description:
-        "Harmoni-Spotify-Clone is a sleek, music-focused web app inspired by Spotify that lets users explore and enjoy music with a clean and engaging interface.",
+        "A modern, high-performance e-commerce platform for a seamless and responsive shopping experience",
       skills: [
         { icon: <FaReact />, name: "React" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
@@ -47,6 +48,19 @@ const MyPortfolio = () => {
         { icon: <LuFileJson />, name: "JSON" },
       ],
       demoLink: "https://harmoni-spotify-clone.vercel.app/",
+    },
+     {
+      id: 3,
+      image: p3,
+      projectName: "exlusive-e-commerce",
+      description:
+        "Harmoni-Spotify-Clone is a sleek, music-focused web app inspired by Spotify that lets users explore and enjoy music with a clean and engaging interface.",
+      skills: [
+        { icon: <FaReact />, name: "React" },
+        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+        { icon: <FaJs />, name: "JavaScript" },
+      ],
+      demoLink: "https://exlusive-e-commerce.vercel.app/",
     },
   ];
 
