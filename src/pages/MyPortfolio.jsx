@@ -32,8 +32,7 @@ const MyPortfolio = () => {
         { icon: <FaJs />, name: "JavaScript" },
         { icon: <LuFileJson />, name: "JSON" },
       ],
-      demoLink:
-        "https://theraq-appointment-scheduling-platform-874vxksat.vercel.app/",
+      demoLink: "https://theraq-appointment-scheduling-platf.vercel.app/",
     },
     {
       id: 2,
@@ -131,15 +130,19 @@ const MyPortfolio = () => {
             <h3 className="text-md md:text-xl font-semibold mb-3 text-[#c77dff]">
               Skills Used:
             </h3>
-            
+
             <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
               {selectedProject.skills.map((skill, index) => (
                 <div
                   key={index}
                   className="flex items-center gap-1.5 md:gap-2 bg-white/5 border border-white/10 text-gray-200 px-3 py-1.5 md:px-4 md:py-2 rounded-lg"
                 >
-                  <span className="text-[#c77dff] text-sm md:text-base">{skill.icon}</span>
-                  <span className="text-[10px] md:text-sm font-medium">{skill.name}</span>
+                  <span className="text-[#c77dff] text-sm md:text-base">
+                    {skill.icon}
+                  </span>
+                  <span className="text-[10px] md:text-sm font-medium">
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
