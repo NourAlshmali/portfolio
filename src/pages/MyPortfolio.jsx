@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import p1 from "../assets/img/theraQ.png";
-import p2 from "../assets/img/Harmoni.png";
+import p2 from "../assets/img/TEDx.png";
 import p3 from "../assets/img/e-commerce.png";
 import {
   FaGlobe,
@@ -14,7 +14,13 @@ import {
 import { LuFileJson } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
+import {
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 const MyPortfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -37,16 +43,16 @@ const MyPortfolio = () => {
     {
       id: 2,
       image: p2,
-      projectName: "Harmoni-Spotify-Clone",
+      projectName: "TEDxDamascus Platform ",
       description:
-        "A modern, high-performance e-commerce platform for a seamless and responsive shopping experience",
+        "The official web platform for TEDxDamascus, an independently organized and licensed TED event, built to deliver a premium digital experience.",
       skills: [
-        { icon: <FaReact />, name: "React" },
+        { icon: <SiNextdotjs />, name: "Next.js" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <FaJs />, name: "JavaScript" },
-        { icon: <LuFileJson />, name: "JSON" },
+        { icon: <SiTypescript />, name: "TypeScript" },
+        { icon: <LuFileJson />, name: "REST APIs" },
       ],
-      demoLink: "https://harmoni-spotify-clone.vercel.app/",
+      demoLink: "https://tedxdamascus.sy/en/home/",
     },
     {
       id: 3,

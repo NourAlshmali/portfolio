@@ -8,7 +8,13 @@ import {
   FaGitAlt,
 } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
-import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
 
 const Skills = () => {
   const Tabs = ["Front-end", "Back-end", "Web Development"];
@@ -25,15 +31,20 @@ const Skills = () => {
       { icon: <FaCss3Alt />, name: "CSS", level: 95 },
       { icon: <FaJs />, name: "Javascript", level: 80 },
       { icon: <FaReact />, name: "React", level: 90 },
+      { icon: <SiNextdotjs />, name: "Next.js", level: 70 },
+      { icon: <SiTypescript />, name: "TypeScript", level: 70 },
       { icon: <SiTailwindcss />, name: "Tailwind CSS", level: 90 },
-      { icon: <LuFileJson />, name: "Json", level: 80 },
+      { icon: <LuFileJson />, name: "REST APIs", level: 85 }, // تعديل الاسم هنا ليصبح REST APIs
     ],
     "Front-end": [
       { icon: <FaHtml5 />, name: "HTML5", level: 95 },
       { icon: <FaCss3Alt />, name: "CSS", level: 95 },
       { icon: <FaJs />, name: "Javascript", level: 85 },
       { icon: <FaReact />, name: "React", level: 90 },
+      { icon: <SiNextdotjs />, name: "Next.js", level: 70 },
+      { icon: <SiTypescript />, name: "TypeScript", level: 70 },
       { icon: <SiTailwindcss />, name: "Tailwind CSS", level: 80 },
+      { icon: <LuFileJson />, name: "REST APIs", level: 85 },
     ],
     "Back-end": [
       { icon: <FaNodeJs />, name: "Node.js", level: 80 },
@@ -51,7 +62,6 @@ const Skills = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center py-12">
-      {/* تعديل حاوية الأزرار لتكون مرنة في الموبايل */}
       <div className="flex flex-wrap justify-center gap-4 sm:gap-10 px-4">
         {Tabs.map((tab) => (
           <button
@@ -97,10 +107,16 @@ const Skills = () => {
           >
             <div className="flex justify-between items-center">
               <div className="flex space-x-3 sm:space-x-4 items-center">
-                <span className="text-xl sm:text-2xl text-purple-400">{skill.icon}</span>
-                <span className="font-medium text-sm sm:text-base text-white">{skill.name}</span>
+                <span className="text-xl sm:text-2xl text-purple-400">
+                  {skill.icon}
+                </span>
+                <span className="font-medium text-sm sm:text-base text-white">
+                  {skill.name}
+                </span>
               </div>
-              <span className="text-xs sm:text-sm text-gray-300">{skill.level}%</span>
+              <span className="text-xs sm:text-sm text-gray-300">
+                {skill.level}%
+              </span>
             </div>
 
             <div className="w-full h-2 sm:h-3 bg-white/10 rounded-full overflow-hidden">
